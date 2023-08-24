@@ -9,6 +9,11 @@ public class C extends A
 		System.out.println("iam m3 from C");
 	}
 	
+	public void m1()
+	{
+		System.out.println("iam overrden m1 from C");
+	}
+	
 	public static void main(String[] args) 
 	{
 		A a = new A();

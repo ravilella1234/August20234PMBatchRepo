@@ -6,6 +6,10 @@ public class B extends A // ISA Relationship
 	{
 		System.out.println("iam m2 from B");
 	}
+	public void m1()
+	{
+		System.out.println("iam overrden m1 from B");
+	}
 	
 	public static void main(String[] args) 
 	{
