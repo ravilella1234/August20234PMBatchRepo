@@ -1,5 +1,9 @@
 package launchings;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.Properties;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -14,6 +18,18 @@ public class BaseTest
 {
 	
 	public static WebDriver driver;
+	
+	public static void init() throws Exception
+	{
+		//FileInputStream fis = new FileInputStream("D:\\April2022WD\\August20234PMSeleniumProject\\src\\test\\resources\\data.properties");
+		System.out.println(System.getProperty("user.dir"));
+		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\resources\\data.properties");
+		Properties p = new Properties();
+		p.load(fis);
+		String e = p.getProperty("amazonurl");
+		System.out.println(e);
+	}
+	
 	
 	public static void launch(String browser)
 	{
@@ -38,6 +54,7 @@ public class BaseTest
 	public static void navigateUrl(String url)
 	{
 		driver.get(url);
+		driver.navigate().to(url);
 	}
 
 }
