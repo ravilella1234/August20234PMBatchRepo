@@ -1,6 +1,7 @@
 package launchings;
 
 import java.io.FileInputStream;
+import java.time.Duration;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
@@ -12,6 +13,8 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -101,7 +104,13 @@ public class BaseTest
 	{
 		WebElement element = null;
 		
-		if(locatorkey.endsWith("_id")) {
+		if(!isElementPresent(locatorkey))
+			// report a failure
+				System.out.println("Element is not present with locator : " + locatorkey);
+		
+		element = driver.findElement(getLocator(locatorkey));
+		
+		/*if(locatorkey.endsWith("_id")) {
 			element = driver.findElement(By.id(orprop.getProperty(locatorkey)));
 		}else if(locatorkey.endsWith("_name")) {
 			element = driver.findElement(By.name(orprop.getProperty(locatorkey)));
@@ -115,8 +124,57 @@ public class BaseTest
 			element = driver.findElement(By.linkText(orprop.getProperty(locatorkey)));
 		}else if(locatorkey.endsWith("_linktexttext")) {
 			element = driver.findElement(By.partialLinkText(orprop.getProperty(locatorkey)));
-		}
+		}*/
 		return element;
+	}
+
+
+	public static boolean isElementPresent(String locatorkey) 
+	{
+		System.out.println("Checking the Eleemnt present : " + locatorkey);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.presenceOfElementLocated(getLocator(locatorkey)));
+		
+		/*if(locatorkey.endsWith("_id")) {
+			wait.until(ExpectedConditions.presenceOfElementLocated(By.id(orprop.getProperty(locatorkey))));
+		}else if(locatorkey.endsWith("_name")) {
+			wait.until(ExpectedConditions.presenceOfElementLocated(By.name(orprop.getProperty(locatorkey))));
+		}else if(locatorkey.endsWith("_classname")) {
+			wait.until(ExpectedConditions.presenceOfElementLocated(By.className(orprop.getProperty(locatorkey))));
+		}else if(locatorkey.endsWith("_xpath")) {
+			wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(orprop.getProperty(locatorkey))));
+		}else if(locatorkey.endsWith("_css")) {
+			wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(orprop.getProperty(locatorkey))));
+		}else if(locatorkey.endsWith("_linktext")) {
+			wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText(orprop.getProperty(locatorkey))));
+		}else if(locatorkey.endsWith("_partiallinktext")) {
+			wait.until(ExpectedConditions.presenceOfElementLocated(By.partialLinkText(orprop.getProperty(locatorkey))));
+		}*/
+		return true;
+	}
+	
+	public static By getLocator(String locatorkey) 
+	{	
+		By by = null;
+		
+		if(locatorkey.endsWith("_id")) {
+			by = By.id(orprop.getProperty(locatorkey));
+		}else if(locatorkey.endsWith("_name")) {
+			by = By.name(orprop.getProperty(locatorkey));
+		}else if(locatorkey.endsWith("_classsname")) {
+			by = By.className(orprop.getProperty(locatorkey));
+		}else if(locatorkey.endsWith("_linktext")) {
+			by = By.linkText(orprop.getProperty(locatorkey));
+		}else if(locatorkey.endsWith("_partiallinktext")) {
+			by = By.partialLinkText(orprop.getProperty(locatorkey));
+		}else if(locatorkey.endsWith("_xpath")) {
+			by = By.xpath(orprop.getProperty(locatorkey));
+		}else if(locatorkey.endsWith("_css")) {
+			by = By.cssSelector(orprop.getProperty(locatorkey));
+		}
+		
+		return by;
+		
 	}
 
 }
