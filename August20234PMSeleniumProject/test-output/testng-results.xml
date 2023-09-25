@@ -1,81 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="1" total="5" passed="4">
+<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="AutomationSuite" duration-ms="20160" started-at="2023-09-22T10:52:55Z" finished-at="2023-09-22T10:53:15Z">
+  <suite name="megasuite" duration-ms="0" started-at="2023-09-25T11:07:55Z" finished-at="2023-09-25T11:07:55Z">
     <groups>
     </groups>
-    <test name="AutomationTest" duration-ms="20160" started-at="2023-09-22T10:52:55Z" finished-at="2023-09-22T10:53:15Z">
-      <class name="testng.TNG_003">
-        <test-method status="PASS" signature="startProcess()[pri:0, instance:testng.TNG_003@47ef968d]" name="startProcess" is-config="true" duration-ms="9983" started-at="2023-09-22T10:52:55Z" finished-at="2023-09-22T10:53:05Z">
+  </suite> <!-- megasuite -->
+  <suite name="SuiteA" duration-ms="121" started-at="2023-09-25T11:07:54Z" finished-at="2023-09-25T11:07:54Z">
+    <groups>
+    </groups>
+    <test name="TestA" duration-ms="121" started-at="2023-09-25T11:07:54Z" finished-at="2023-09-25T11:07:54Z">
+      <class name="suiteA.TestA2">
+        <test-method status="PASS" signature="testA2()[pri:0, instance:suiteA.TestA2@71c7db30]" name="testA2" duration-ms="6" started-at="2023-09-25T11:07:54Z" finished-at="2023-09-25T11:07:54Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- startProcess -->
-        <test-method status="PASS" signature="amazon()[pri:0, instance:testng.TNG_003@47ef968d]" name="amazon" duration-ms="7252" started-at="2023-09-22T10:53:05Z" finished-at="2023-09-22T10:53:12Z">
+        </test-method> <!-- testA2 -->
+      </class> <!-- suiteA.TestA2 -->
+      <class name="suiteA.TestA3">
+        <test-method status="PASS" signature="testA3()[pri:0, instance:suiteA.TestA3@5a01ccaa]" name="testA3" duration-ms="1" started-at="2023-09-25T11:07:54Z" finished-at="2023-09-25T11:07:54Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- amazon -->
-        <test-method status="PASS" signature="endProcess()[pri:0, instance:testng.TNG_003@47ef968d]" name="endProcess" is-config="true" duration-ms="2787" started-at="2023-09-22T10:53:12Z" finished-at="2023-09-22T10:53:15Z">
+        </test-method> <!-- testA3 -->
+      </class> <!-- suiteA.TestA3 -->
+      <class name="suiteA.TestA1">
+        <test-method status="PASS" signature="testA1()[pri:0, instance:suiteA.TestA1@47f37ef1]" name="testA1" duration-ms="18" started-at="2023-09-25T11:07:54Z" finished-at="2023-09-25T11:07:54Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- endProcess -->
-      </class> <!-- testng.TNG_003 -->
-      <class name="testng.TNG_001">
-        <test-method status="PASS" signature="f()[pri:0, instance:testng.TNG_001@5bc79255]" name="f" duration-ms="14" started-at="2023-09-22T10:52:55Z" finished-at="2023-09-22T10:52:55Z">
+        </test-method> <!-- testA1 -->
+      </class> <!-- suiteA.TestA1 -->
+    </test> <!-- TestA -->
+  </suite> <!-- SuiteA -->
+  <suite name="SuiteB" duration-ms="115" started-at="2023-09-25T11:07:54Z" finished-at="2023-09-25T11:07:54Z">
+    <groups>
+    </groups>
+    <test name="TestB" duration-ms="115" started-at="2023-09-25T11:07:54Z" finished-at="2023-09-25T11:07:54Z">
+      <class name="suiteB.TestB1">
+        <test-method status="PASS" signature="testB1()[pri:0, instance:suiteB.TestB1@2133c8f8]" name="testB1" duration-ms="1" started-at="2023-09-25T11:07:54Z" finished-at="2023-09-25T11:07:54Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- f -->
-      </class> <!-- testng.TNG_001 -->
-      <class name="testng.TNG_002">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:testng.TNG_002@6e0e048a]" name="beforeSuite" is-config="true" duration-ms="52" started-at="2023-09-22T10:52:55Z" finished-at="2023-09-22T10:52:55Z">
+        </test-method> <!-- testB1 -->
+      </class> <!-- suiteB.TestB1 -->
+      <class name="suiteB.TestB3">
+        <test-method status="PASS" signature="testB3()[pri:0, instance:suiteB.TestB3@49e4cb85]" name="testB3" duration-ms="0" started-at="2023-09-25T11:07:54Z" finished-at="2023-09-25T11:07:54Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:testng.TNG_002@6e0e048a]" name="beforeTest" is-config="true" duration-ms="2" started-at="2023-09-22T10:52:55Z" finished-at="2023-09-22T10:52:55Z">
+        </test-method> <!-- testB3 -->
+      </class> <!-- suiteB.TestB3 -->
+      <class name="suiteB.TestB2">
+        <test-method status="PASS" signature="testB2()[pri:0, instance:suiteB.TestB2@7c30a502]" name="testB2" duration-ms="17" started-at="2023-09-25T11:07:54Z" finished-at="2023-09-25T11:07:54Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:testng.TNG_002@6e0e048a]" name="beforeClass" is-config="true" duration-ms="0" started-at="2023-09-22T10:53:15Z" finished-at="2023-09-22T10:53:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:testng.TNG_002@6e0e048a]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2023-09-22T10:53:15Z" finished-at="2023-09-22T10:53:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="f()[pri:1, instance:testng.TNG_002@6e0e048a]" name="f" duration-ms="12" started-at="2023-09-22T10:53:15Z" finished-at="2023-09-22T10:53:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- f -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testng.TNG_002@6e0e048a]" name="afterMethod" is-config="true" duration-ms="2" started-at="2023-09-22T10:53:15Z" finished-at="2023-09-22T10:53:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:testng.TNG_002@6e0e048a]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2023-09-22T10:53:15Z" finished-at="2023-09-22T10:53:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="a()[pri:2, instance:testng.TNG_002@6e0e048a]" name="a" duration-ms="4" started-at="2023-09-22T10:53:15Z" finished-at="2023-09-22T10:53:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- a -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testng.TNG_002@6e0e048a]" name="afterMethod" is-config="true" duration-ms="5" started-at="2023-09-22T10:53:15Z" finished-at="2023-09-22T10:53:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:testng.TNG_002@6e0e048a]" name="afterClass" is-config="true" duration-ms="2" started-at="2023-09-22T10:53:15Z" finished-at="2023-09-22T10:53:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:testng.TNG_002@6e0e048a]" name="afterTest" is-config="true" duration-ms="2" started-at="2023-09-22T10:53:15Z" finished-at="2023-09-22T10:53:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:testng.TNG_002@6e0e048a]" name="afterSuite" is-config="true" duration-ms="1" started-at="2023-09-22T10:53:15Z" finished-at="2023-09-22T10:53:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterSuite -->
-      </class> <!-- testng.TNG_002 -->
-    </test> <!-- AutomationTest -->
-  </suite> <!-- AutomationSuite -->
+        </test-method> <!-- testB2 -->
+      </class> <!-- suiteB.TestB2 -->
+    </test> <!-- TestB -->
+  </suite> <!-- SuiteB -->
 </testng-results>
